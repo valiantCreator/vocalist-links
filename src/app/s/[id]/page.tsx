@@ -3,6 +3,7 @@ import { getSongLinks } from '@/lib/odesli';
 import { GlassLinkCard } from '@/components/GlassLinkCard';
 import { Music2, Youtube, Apple, Disc } from 'lucide-react';
 import Image from 'next/image';
+import { SONGS } from '@/config/songs';
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -23,24 +24,21 @@ const PLATFORM_NAMES: Record<string, string> = {
 };
 
 export async function generateStaticParams() {
-  return [{ id: '1' }];
+  return SONGS.map((song) => ({ id: song.id }));
 }
 
 export default async function SongPage({ params }: PageProps) {
   const { id } = await params;
   
-  // For MVP, we'll map ID 1 to the specific track provided
-  const spotifyUrl = id === '1' 
-    ? 'https://open.spotify.com/track/0ak22I3dEykeH8bwaWLg0k?si=7-m6M08HRk-XtU319BIAUQ'
-    : null;
+  const song = SONGS.find((s) => s.id === id);
 
-  if (!spotifyUrl) {
+  if (!song) {
     return notFound();
   }
 
   let data;
   try {
-    data = await getSongLinks(spotifyUrl);
+    data = await getSongLinks(song.spotifyUrl);
   } catch (error) {
     console.error('Failed to fetch song links:', error);
     return notFound();
