@@ -59,7 +59,7 @@ export default async function SongPage({ params }: PageProps) {
         {/* Profile Header */}
         <div className="flex flex-col items-center space-y-6 text-center">
           {/* Recipient Avatar */}
-          <div className="relative h-32 w-32 overflow-hidden rounded-full border-2 border-white/20 shadow-[0_0_30px_rgba(255,255,255,0.1)] transition-transform hover:scale-105 active:scale-95">
+          <div className="relative h-32 w-32 overflow-hidden rounded-full border-2 border-white/20 shadow-[0_0_15px_rgba(255,255,255,0.1)] transition-transform hover:scale-105 active:scale-95">
             <Image
               src={
                 song.id === '1' ? '/images/sofiat.png' :
@@ -122,7 +122,7 @@ export default async function SongPage({ params }: PageProps) {
 
         {/* Footer */}
         <p className="pt-8 text-center text-xs font-bold uppercase tracking-widest text-white/20">
-          Vocalist Links &copy; 2026
+          Nana's Super Sweet 16 <span className="font-caveat text-base normal-case tracking-normal inline-block -rotate-[5deg]">x²</span>
         </p>
       </div>
     </main>
