@@ -4,7 +4,7 @@ import path from 'path';
 import { SONGS } from '../src/config/songs';
 
 async function generateQRs() {
-  const outDir = path.join(process.cwd(), 'public', 'qrs');
+  const outDir = path.join(process.cwd(), 'output', 'qrs');
   
   if (!fs.existsSync(outDir)) {
     fs.mkdirSync(outDir, { recursive: true });
@@ -19,7 +19,7 @@ async function generateQRs() {
         type: 'svg',
         color: {
           dark: '#ffffff',
-          light: '#00000000' // transparent
+          light: '#000000' // pure black
         },
         margin: 1
       });

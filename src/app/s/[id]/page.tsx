@@ -57,24 +57,37 @@ export default async function SongPage({ params }: PageProps) {
     <main className="flex min-h-screen flex-col items-center justify-center p-6 bg-black">
       <div className="w-full max-w-md space-y-8">
         {/* Profile Header */}
-        <div className="flex flex-col items-center space-y-4 text-center">
-          {identity?.thumbnailUrl && (
-            <div className="relative h-24 w-24 overflow-hidden rounded-full border border-white/20 shadow-2xl">
-              <Image
-                src={identity.thumbnailUrl}
-                alt={identity.title || 'Album Art'}
-                fill
-                className="object-cover"
-              />
+        <div className="flex flex-col items-center space-y-6 text-center">
+          {/* Recipient Avatar */}
+          <div className="relative h-32 w-32 overflow-hidden rounded-full border border-white/20 shadow-[0_0_30px_rgba(255,255,255,0.1)] transition-transform hover:scale-105 active:scale-95">
+            <Image
+              src={`https://ui-avatars.com/api/?name=${encodeURIComponent(song.recipient)}&background=111&color=fff&size=256&bold=true`}
+              alt={song.recipient}
+              fill
+              className="object-cover"
+            />
+          </div>
+
+          <div className="space-y-4">
+            <div className="space-y-0">
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/40">
+                Dedicated to
+              </p>
+              <h2 className="text-4xl font-black tracking-tighter text-white sm:text-5xl">
+                {song.recipient}
+              </h2>
             </div>
-          )}
-          <div className="space-y-1">
-            <h1 className="text-3xl font-black tracking-tighter uppercase sm:text-4xl text-white">
-              {identity?.title || 'Song Title'}
-            </h1>
-            <p className="text-lg font-medium tracking-tight text-white/60">
-              {identity?.artistName || 'Artist Name'}
-            </p>
+
+            <div className="h-px w-12 bg-white/10 mx-auto" />
+
+            <div className="space-y-1">
+              <h1 className="text-xl font-bold tracking-tight text-white/90">
+                {identity?.title || song.name}
+              </h1>
+              <p className="text-sm font-medium tracking-wide text-white/50">
+                {identity?.artistName || song.artist}
+              </p>
+            </div>
           </div>
         </div>
 
