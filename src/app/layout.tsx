@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Great_Vibes } from "next/font/google";
+import { Geist, Geist_Mono, Monsieur_La_Doulaise } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,9 +12,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const greatVibes = Great_Vibes({
+const monsieurLaDoulaise = Monsieur_La_Doulaise({
   weight: "400",
-  variable: "--font-great-vibes",
+  variable: "--font-monsieur-la-doulaise",
   subsets: ["latin"],
 });
 
@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${greatVibes.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${monsieurLaDoulaise.variable} antialiased`}
       >
         {children}
       </body>

@@ -119,10 +119,14 @@ export default async function SongPage({ params }: PageProps) {
             );
           })}
         </div>
-
         {/* Footer */}
-        <p className="pt-8 text-center text-xs font-bold uppercase tracking-widest text-white/20">
-          Nana's Super Sweet 16 <span className="font-[family-name:var(--font-great-vibes)] text-xl normal-case tracking-normal inline-block -rotate-[3deg] translate-y-[2px] ml-1">x2</span>
+        <p className="pt-8 pb-8 text-center text-xs font-bold uppercase tracking-widest text-white/20 relative">
+          Nana's Super Sweet <span className="relative inline-block">
+            16
+            <span className="absolute top-[-1.1rem] right-[-1.2rem] rotate-[-10deg] font-[family-name:var(--font-monsieur-la-doulaise)] text-2xl normal-case tracking-normal text-white/90 whitespace-nowrap">
+              <span>x</span><span className="-ml-[0.2em]">2</span>
+            </span>
+          </span>
         </p>
       </div>
     </main>
