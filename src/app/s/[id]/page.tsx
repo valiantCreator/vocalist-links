@@ -47,6 +47,24 @@ export default async function SongPage({ params }: PageProps) {
   const identity = data.entitiesByUniqueId[data.entityUniqueId];
   const links = data.linksByPlatform;
 
+  // Merge manual links if they exist
+  if (song.manualLinks) {
+    if (song.manualLinks.appleMusic) {
+      links['appleMusic'] = { 
+        url: song.manualLinks.appleMusic, 
+        country: 'US', 
+        entityUniqueId: 'manual-override' 
+      };
+    }
+    if (song.manualLinks.spotify) {
+      links['spotify'] = { 
+        url: song.manualLinks.spotify, 
+        country: 'US', 
+        entityUniqueId: 'manual-override' 
+      };
+    }
+  }
+
   // Filter for key platforms
   const targetPlatforms = ['spotify', 'appleMusic', 'youtube'];
   const filteredLinks = Object.entries(links)
