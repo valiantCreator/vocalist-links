@@ -79,15 +79,11 @@ export default async function SongPage({ params }: PageProps) {
           {/* Recipient Avatar */}
           <div className="relative h-32 w-32 overflow-hidden rounded-full border-2 border-white/20 shadow-[0_0_15px_rgba(255,255,255,0.1)] transition-transform hover:scale-105 active:scale-95">
             <Image
-              src={
-                song.id === '1' ? '/images/sofiat.png' :
-                song.id === '7' ? '/images/phoebe.png' :
-                `https://ui-avatars.com/api/?name=${encodeURIComponent(song.recipient)}&background=111&color=fff&size=256&bold=true`
-              }
+              src={song.image || `https://ui-avatars.com/api/?name=${encodeURIComponent(song.recipient)}&background=111&color=fff&size=256&bold=true`}
               alt={song.recipient}
               fill
               priority
-              className="object-cover object-[center_25%]"
+              className="object-cover object-[center_20%]"
             />
           </div>
 

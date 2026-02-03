@@ -4,6 +4,7 @@ export interface SongConfig {
   artist: string;
   spotifyUrl: string;
   recipient: string;
+  image?: string;
   manualLinks?: {
     appleMusic?: string;
     spotify?: string;
@@ -18,6 +19,7 @@ export const SONGS: SongConfig[] = [
     artist: 'Hezekiah Walker',
     spotifyUrl: 'https://open.spotify.com/track/0ak22I3dEykeH8bwaWLg0k?si=7-m6M08HRk-XtU319BIAUQ',
     recipient: 'Sofiat',
+    image: '/images/sofiat.png',
   },
   {
     id: '2',
@@ -60,13 +62,15 @@ export const SONGS: SongConfig[] = [
     artist: 'Ada Ehi',
     spotifyUrl: 'https://open.spotify.com/track/1aNryETX3dSY4A0M8BIqPE?si=a9db20f5136f4f48',
     recipient: 'Phoebe',
+    image: '/images/phoebe.png',
   },
   {
     id: '8',
     name: 'No One Else',
     artist: 'LoveWorld Singers CEYC Airport City',
     spotifyUrl: 'https://youtu.be/BzddQg4W--Y',
-    recipient: 'Special Guest',
+    recipient: 'Moni',
+    image: '/images/moni.png',
     manualLinks: {
       appleMusic: 'https://music.apple.com/us/album/no-one-else-single/1622037494',
     },
@@ -76,13 +80,14 @@ export const SONGS: SongConfig[] = [
     name: 'Prayer Answering God',
     artist: 'Team Eternity Ghana ft. Vessel Chordrick',
     spotifyUrl: 'https://open.spotify.com/track/5jvWfZxsIv2tczKzvDm43m?si=bk-3l9MYRQ6gJTizIAu08w',
-    recipient: 'Special Guest',
+    recipient: 'Amanda',
   },
   {
     id: '10',
     name: 'I Am',
     artist: 'Jason Nelson',
     spotifyUrl: 'https://open.spotify.com/track/7eQPdpUnjM3zDvQ8MQJyAf',
-    recipient: 'Special Guest',
+    recipient: 'Natalie',
+    image: '/images/natalie.jpeg',
   },
 ];
