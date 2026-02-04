@@ -132,6 +132,6 @@ export const SONGS: SongConfig[] = [
     spotifyUrl: 'https://youtu.be/IAfeJGgOBAo',
     recipient: 'Gifty',
     image: '/images/gifty.jpeg',
-    imagePosition: 'center 20%',
+    imagePosition: '60% 35%',
   },
 ];
