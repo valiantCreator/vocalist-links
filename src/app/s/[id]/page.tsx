@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { getSongLinks } from '@/lib/odesli';
 import { GlassLinkCard } from '@/components/GlassLinkCard';
+import { PersonalNote } from '@/components/PersonalNote';
 import { Music2, Youtube, Apple, Disc } from 'lucide-react';
 import Image from 'next/image';
 import { SONGS } from '@/config/songs';
@@ -112,8 +113,10 @@ export default async function SongPage({ params }: PageProps) {
                 {identity?.artistName || song.artist}
               </p>
             </div>
+            </div>
+            
+            <PersonalNote note={song.note} recipient={song.recipient} />
           </div>
-        </div>
 
         {/* Links Stack */}
         <div className="grid gap-3">

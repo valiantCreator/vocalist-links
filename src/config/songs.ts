@@ -7,6 +7,7 @@ export interface SongConfig {
   image?: string;
   imagePosition?: string;
   imageScale?: number;
+  note?: string;
   manualLinks?: {
     appleMusic?: string;
     spotify?: string;
@@ -22,6 +23,7 @@ export const SONGS: SongConfig[] = [
     spotifyUrl: 'https://open.spotify.com/track/0ak22I3dEykeH8bwaWLg0k?si=7-m6M08HRk-XtU319BIAUQ',
     recipient: 'Sofiat',
     image: '/images/sofiat.png',
+    note: "Happy Sweet 16! This is a placeholder note to verify the new personal message feature. I hope you love the design!",
   },
   {
     id: '2',
