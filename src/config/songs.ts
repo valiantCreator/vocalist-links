@@ -15,6 +15,16 @@ export interface SongConfig {
   };
 }
 
+const getGlobalNote = (name: string) => `Dear ${name},
+
+As scripture says in Philippians 1:3, "I thank my God in all my remembrance of you." I thank God for the privilege of doing life with you. I pray that the words of this song will be a blessing to you.
+(Don’t embarrass me in the future 😂)
+
+Love always,
+Nana xxx
+
+P.S. As Nigerians will say, don’t fall my hand ooo. Till the wheels never fall off 🤞🏾🤟🏾`;
+
 export const SONGS: SongConfig[] = [
   {
     id: '1',
@@ -23,7 +33,7 @@ export const SONGS: SongConfig[] = [
     spotifyUrl: 'https://open.spotify.com/track/0ak22I3dEykeH8bwaWLg0k?si=7-m6M08HRk-XtU319BIAUQ',
     recipient: 'Sofiat',
     image: '/images/sofiat.png',
-    note: "Happy Sweet 16! This is a placeholder note to verify the new personal message feature. I hope you love the design!",
+    note: getGlobalNote('Sofiat'),
   },
   {
     id: '2',
@@ -32,6 +42,7 @@ export const SONGS: SongConfig[] = [
     spotifyUrl: 'https://open.spotify.com/track/4rjIjPrpDPIu2W8wwSB9Do?si=vSNhm89cRKiEYsjW4CtrCg',
     recipient: 'Jessica',
     image: '/images/jessica.jpeg',
+    note: getGlobalNote('Jessica'),
   },
   {
     id: '3',
@@ -56,6 +67,7 @@ export const SONGS: SongConfig[] = [
     image: '/images/antoinette.jpeg',
     imagePosition: '50% 0%',
     imageScale: 1.5,
+    note: getGlobalNote('Antoinette'),
   },
   {
     id: '6',
@@ -71,6 +83,7 @@ export const SONGS: SongConfig[] = [
     spotifyUrl: 'https://open.spotify.com/track/1aNryETX3dSY4A0M8BIqPE?si=a9db20f5136f4f48',
     recipient: 'Phoebe',
     image: '/images/phoebe.png',
+    note: getGlobalNote('Phoebe'),
   },
   {
     id: '8',
@@ -79,6 +92,7 @@ export const SONGS: SongConfig[] = [
     spotifyUrl: 'https://open.spotify.com/track/5jvWfZxsIv2tczKzvDm43m?si=bk-3l9MYRQ6gJTizIAu08w',
     recipient: 'Amanda',
     image: '/images/amanda.jpeg',
+    note: getGlobalNote('Amanda'),
   },
   {
     id: '9',
@@ -90,6 +104,7 @@ export const SONGS: SongConfig[] = [
     manualLinks: {
       appleMusic: 'https://music.apple.com/us/album/no-one-else-single/1622037494',
     },
+    note: getGlobalNote('Moni'),
   },
   {
     id: '10',
@@ -98,6 +113,7 @@ export const SONGS: SongConfig[] = [
     spotifyUrl: 'https://open.spotify.com/track/7eQPdpUnjM3zDvQ8MQJyAf',
     recipient: 'Natalie',
     image: '/images/natalie.jpeg',
+    note: getGlobalNote('Natalie'),
   },
   {
     id: '11',
@@ -106,6 +122,7 @@ export const SONGS: SongConfig[] = [
     spotifyUrl: 'https://open.spotify.com/track/0ak22I3dEykeH8bwaWLg0k',
     recipient: 'Caroline',
     image: '/images/caroline.jpeg',
+    note: getGlobalNote('Caroline'),
   },
   {
     id: '12',
@@ -114,6 +131,7 @@ export const SONGS: SongConfig[] = [
     spotifyUrl: 'https://open.spotify.com/track/0xUE0pPfaap7pLtRJg0yTh',
     recipient: 'Mame',
     image: '/images/Mame.jpeg',
+    note: getGlobalNote('Mame'),
   },
   {
     id: '13',
@@ -124,6 +142,7 @@ export const SONGS: SongConfig[] = [
     image: '/images/Yvette.jpeg',
     imagePosition: '50% 0%',
     imageScale: 1.5,
+    note: getGlobalNote('Yvette'),
   },
   {
     id: '14',
@@ -134,5 +153,6 @@ export const SONGS: SongConfig[] = [
     image: '/images/gifty.jpeg',
     imagePosition: '90% 70%',
     imageScale: 1.2,
+    note: getGlobalNote('Gifty'),
   },
 ];

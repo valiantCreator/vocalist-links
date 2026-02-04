@@ -31,7 +31,7 @@ export function PersonalNote({ note, recipient }: PersonalNoteProps) {
         >
           {/* Modal Card */}
           <div 
-            className="relative w-full max-w-lg transform overflow-hidden rounded-2xl border border-white/20 bg-white/10 p-8 shadow-2xl backdrop-blur-xl transition-all"
+            className="relative w-full max-w-lg transform overflow-hidden rounded-2xl border border-white/20 bg-white/10 p-6 shadow-2xl backdrop-blur-xl transition-all md:p-8"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
@@ -43,14 +43,14 @@ export function PersonalNote({ note, recipient }: PersonalNoteProps) {
             </button>
 
             {/* Content */}
-            <div className="space-y-6 text-center">
+            <div className="space-y-4 text-center md:space-y-6">
               <h3 className="text-sm font-bold uppercase tracking-widest text-pink-400">
                 A Note for {recipient}
               </h3>
               
               <div className="relative">
                 {/* Decorative Quotes? Optional. keeping it simple first. */}
-                <p className="font-[family-name:var(--font-caveat)] text-2xl leading-relaxed text-white/90 md:text-3xl">
+                <p className="font-[family-name:var(--font-caveat)] text-lg leading-snug whitespace-pre-wrap text-white/90 md:text-2xl md:leading-loose">
                   "{note}"
                 </p>
               </div>
