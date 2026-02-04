@@ -35,6 +35,12 @@ All static assets reside in the `/public/images` directory.
 *   **Music Data:** Odesli API (Songlink)
 *   **QR Generation:** `qrcode` (Node.js script)
 
+## 📱 Mobile Design Standards
+To ensure the handwritten 'Caveat' font remains elegant yet readable on small screens:
+*   **Mobile:** `text-lg` with `leading-snug` and tight padding (`p-6`).
+*   **Desktop:** `text-2xl` with `leading-loose` and spacious padding (`p-8`).
+*   **Whitespace:** `whitespace-pre-wrap` is mandatory to respect stanza breaks in the configuration.
+
 ## 🚀 Deployment
 
 ### Continuous Deployment

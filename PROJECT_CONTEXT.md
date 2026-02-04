@@ -36,10 +36,13 @@ The API often fails or returns incorrect results for niche genres (e.g., African
 
 ## 🛣️ Roadmap
 
-### Personal Notes (Feature)
+### Personal Notes (Standard) - [COMPLETED]
 *   **Goal:** Allow users to read a personal dedication note.
-*   **UI Plan:** A "Read Note" button that triggers a clean, minimalist **Modal/Popup**.
-*   **Avoid:** Do not clutter the main page with long text blocks.
+*   **Implementation:** A "Read Note" button triggers a responsive Glassmorphism modal.
+*   **Content Rules:**
+    *   **Scripture:** Philippians 1:3 (NIV) is the standard text.
+    *   **Personalization:** "Dear [Name]" is dynamically injected via `getGlobalNote(name)`.
+    *   **Typography:** `Caveat` font, `whitespace-pre-wrap` for layout, responsive sizing (see README).
 
 ### White Labeling (Refactor)
 *   **Goal:** Abstract hardcoded colors (black background, pink accents) and fonts into a centralized `src/config/theme.ts`.
