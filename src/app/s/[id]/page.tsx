@@ -83,7 +83,12 @@ export default async function SongPage({ params }: PageProps) {
               alt={song.recipient}
               fill
               priority
-              className="object-cover object-[center_20%]"
+              className="object-cover"
+              style={{ 
+                objectPosition: (song.imagePosition || 'center_20%').replace(/_/g, ' '),
+                transform: `scale(${song.imageScale || 1})`,
+                transformOrigin: (song.imagePosition || 'center_20%').replace(/_/g, ' ')
+              }}
             />
           </div>
 

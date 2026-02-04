@@ -5,6 +5,8 @@ export interface SongConfig {
   spotifyUrl: string;
   recipient: string;
   image?: string;
+  imagePosition?: string;
+  imageScale?: number;
   manualLinks?: {
     appleMusic?: string;
     spotify?: string;
@@ -23,10 +25,11 @@ export const SONGS: SongConfig[] = [
   },
   {
     id: '2',
-    name: 'Always Sisters',
-    artist: 'CeCe Winans',
-    spotifyUrl: 'https://open.spotify.com/track/0pUM8WiGTVa7XgM0lCndkZ?si=4febd2b2b91b4822',
-    recipient: 'Special Guest',
+    name: 'Ndum (My Life)',
+    artist: 'Nathaniel Bassey',
+    spotifyUrl: 'https://open.spotify.com/track/4rjIjPrpDPIu2W8wwSB9Do?si=vSNhm89cRKiEYsjW4CtrCg',
+    recipient: 'Jessica',
+    image: '/images/jessica.jpeg',
   },
   {
     id: '3',
@@ -44,10 +47,13 @@ export const SONGS: SongConfig[] = [
   },
   {
     id: '5',
-    name: 'Amen',
+    name: 'Everything (Amen)',
     artist: 'Timi Dakolo',
     spotifyUrl: 'https://open.spotify.com/track/3Scc4HtHuKB35zJmro4slF?si=6ebd88e734aa4b6e',
-    recipient: 'Special Guest',
+    recipient: 'Antoinette',
+    image: '/images/antoinette.jpeg',
+    imagePosition: '50% 0%',
+    imageScale: 1.5,
   },
   {
     id: '6',
@@ -66,6 +72,14 @@ export const SONGS: SongConfig[] = [
   },
   {
     id: '8',
+    name: 'Prayer Answering God',
+    artist: 'Team Eternity Ghana ft. Vessel Chordrick',
+    spotifyUrl: 'https://open.spotify.com/track/5jvWfZxsIv2tczKzvDm43m?si=bk-3l9MYRQ6gJTizIAu08w',
+    recipient: 'Amanda',
+    image: '/images/amanda.jpeg',
+  },
+  {
+    id: '9',
     name: 'No One Else',
     artist: 'LoveWorld Singers CEYC Airport City',
     spotifyUrl: 'https://youtu.be/BzddQg4W--Y',
@@ -76,18 +90,37 @@ export const SONGS: SongConfig[] = [
     },
   },
   {
-    id: '9',
-    name: 'Prayer Answering God',
-    artist: 'Team Eternity Ghana ft. Vessel Chordrick',
-    spotifyUrl: 'https://open.spotify.com/track/5jvWfZxsIv2tczKzvDm43m?si=bk-3l9MYRQ6gJTizIAu08w',
-    recipient: 'Amanda',
-  },
-  {
     id: '10',
     name: 'I Am',
     artist: 'Jason Nelson',
     spotifyUrl: 'https://open.spotify.com/track/7eQPdpUnjM3zDvQ8MQJyAf',
     recipient: 'Natalie',
     image: '/images/natalie.jpeg',
+  },
+  {
+    id: '11',
+    name: 'TBD',
+    artist: 'Unknown',
+    spotifyUrl: 'https://open.spotify.com/track/0ak22I3dEykeH8bwaWLg0k',
+    recipient: 'Caroline',
+    image: '/images/caroline.jpeg',
+  },
+  {
+    id: '12',
+    name: "While I'm Waiting",
+    artist: 'Travis Greene',
+    spotifyUrl: 'https://open.spotify.com/track/0xUE0pPfaap7pLtRJg0yTh',
+    recipient: 'Mame',
+    image: '/images/Mame.jpeg',
+  },
+  {
+    id: '13',
+    name: 'TBD',
+    artist: 'Unknown',
+    spotifyUrl: 'https://open.spotify.com/track/0ak22I3dEykeH8bwaWLg0k',
+    recipient: 'Yvette',
+    image: '/images/Yvette.jpeg',
+    imagePosition: '50% 0%',
+    imageScale: 1.5,
   },
 ];
