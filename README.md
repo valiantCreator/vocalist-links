@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Vocalist Links
 
-## Getting Started
+A personalized tribute and music link platform built with **Next.js 16** and **Tailwind CSS**. Designed for high-fidelity mobile experiences with a "Dark Minimalist" aesthetic.
 
-First, run the development server:
+## 🚀 Quick Start
+
+**Important:** To avoid port conflicts with other local services, always run this project on **port 3001**.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Install dependencies
+npm install
+
+# Run development server (Port 3001)
+# DO NOT use `npm run dev -- -p 3001` (causes directory errors with some shells)
+npx next dev -p 3001
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3001](http://localhost:3001) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📂 Asset Management
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+All static assets reside in the `/public/images` directory.
 
-## Learn More
+### Naming Convention
+**Strict Rule:** All image files must use **lowercase kebab-case** (e.g., `natalie.jpeg`, `moni.jpg`).
+*   ❌ `Natalie.jpeg` (Case sensitivity issues on Vercel/Linux)
+*   ❌ `Profile Pic.jpg` (Spaces cause URL encoding issues)
+*   ✅ `natalie.jpeg`
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠 Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+*   **Framework:** Next.js 16 (App Router)
+*   **Styling:** Tailwind CSS 4.0
+*   **Icons:** Lucide React
+*   **Music Data:** Odesli API (Songlink)
+*   **QR Generation:** `qrcode` (Node.js script)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Deployment
 
-## Deploy on Vercel
+### Continuous Deployment
+This project is connected to Vercel. Any push to the `main` branch automatically triggers a production deployment.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Git Workflow ("Speed Run")
+We follow a streamlined "Speed Run" workflow:
+1.  Develop features locally.
+2.  **Verify strictly** on `localhost:3001` (visual layout, links).
+3.  Commit and push directly to `main`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+git add .
+git commit -m "feat: description of changes"
+git push origin main
+```
