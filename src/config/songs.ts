@@ -17,8 +17,11 @@ export interface SongConfig {
 
 const getGlobalNote = (name: string, includePS = true) => `Dear ${name},
 
-As scripture says in Philippians 1:3, "I thank my God in all my remembrance of you." I thank God for the privilege of doing life with you. I pray that the words of this song will be a blessing to you.
-(Don’t embarrass me in the future 😂)
+As scripture says in Philippians 1:3, 
+"I thank my God every time I remember you." 
+
+I thank God for the privilege of doing life with you. 
+I pray that the words of this song will be a blessing to you. (Don’t embarrass me in the future 😂)
 
 Love always,
 Nana xxx${includePS ? `
@@ -28,7 +31,7 @@ P.S. As Nigerians will say, don’t fall my hand ooo. Till the wheels never fall
 const AUNTY_GIFTY_NOTE = `Dear Aunty Gifty,
 
 As scripture says in Philippians 1:3, 
-"I thank my God in all my remembrance of you."
+"I thank my God every time I remember you."
 
 I thank God for the privilege of doing life with you. I pray that the words of this song will be a blessing to you.
 
