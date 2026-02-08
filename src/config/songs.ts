@@ -21,12 +21,13 @@ As scripture says in Philippians 1:3,
 "I thank my God every time I remember you." 
 
 I thank God for the privilege of doing life with you. 
-I pray that the words of this song will be a blessing to you. (Don’t embarrass me in the future 😂)
+I pray that the words of this song will be a blessing to you.
 
 Love always,
 Nana xxx${includePS ? `
 
-P.S. As Nigerians will say, don’t fall my hand ooo. Till the wheels never fall off 🤞🏾🤟🏾` : ''}`;
+P.S. As Nigerians will say, don’t fall my hand ooo. 
+Till the wheels never fall off 🤞🏾🤟🏾` : ''}`;
 
 const AUNTY_GIFTY_NOTE = `Dear Aunty Gifty,
 

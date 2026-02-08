@@ -51,7 +51,7 @@ export function PersonalNote({ note, recipient }: PersonalNoteProps) {
               <div className="relative">
                 {/* Decorative Quotes? Optional. keeping it simple first. */}
                 <p className="font-[family-name:var(--font-caveat)] text-lg leading-snug whitespace-pre-wrap text-white/90 md:text-2xl md:leading-loose">
-                  "{note}"
+                  {note}
                 </p>
               </div>
 
